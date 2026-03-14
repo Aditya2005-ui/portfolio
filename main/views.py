@@ -5,7 +5,6 @@ from django.conf import settings
 def home(request):
 
     if request.method == "POST":
-
         name = request.POST.get("name")
         email = request.POST.get("email")
         message = request.POST.get("message")
@@ -20,16 +19,13 @@ Message:
 {message}
 """
 
-        try:
-            send_mail(
-                subject,
-                full_message,
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
-                fail_silently=True
-            )
-        except Exception:
-            pass
+        send_mail(
+            subject,
+            full_message,
+            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER],
+            fail_silently=True
+        )
 
         return redirect("/")
 
