@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Aditya Jagtap | Portfolio</title>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Animation Library -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav data-aos="fade-down">
+
+<h2 class="logo">Aditya Jagtap</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+
+<div class="hero-text" data-aos="fade-right">
+
+<h1>Hello, I'm <span>Aditya Jagtap</span></h1>
+
+<p>Computer Engineering Graduate | Python Full Stack Developer</p>
+
+<a href="{% static 'resume.pdf' %}" class="btn" download>
+Download Resume
+</a>
+
+</div>
+
+<div class="hero-img" data-aos="fade-left">
+
+<img src="{% static 'images/profile.jpg' %}" alt="profile">
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" data-aos="fade-up">
+
+<h2>About Me</h2>
+
+<p>
+I am Aditya Jagtap, a Computer Engineering graduate passionate about
+Python, Django, Artificial Intelligence, Machine Learning and Web
+Development. I enjoy building practical web applications and currently
+working on an online exam web application. My goal is to become a
+Full Stack Developer and later grow in the field of Data Science.
+</p>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-card">
+
+<div class="edu-icon">
+🎓
+</div>
+
+<div class="edu-content">
+
+<h3>Bachelor of Engineering in Computer Engineering</h3>
+
+<h4>Savitribai Phule Pune University</h4>
+
+<p class="edu-year">2023 - 2027</p>
+
+<p>
+Currently pursuing a Bachelor’s degree in Computer Engineering at
+P.K. Technical Campus, Chakan, Pune affiliated with Savitribai Phule
+Pune University. During my studies I am developing strong skills in
+Python, Web Development, Artificial Intelligence and Machine Learning.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" data-aos="fade-up">
+
+<h2>Skills</h2>
+
+<div class="skill">
+
+<div class="skill-title">
+<span>HTML</span>
+<span>94%</span>
+</div>
+
+<div class="progress">
+<div class="progress-bar html"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-title">
+<span>CSS</span>
+<span>83%</span>
+</div>
+
+<div class="progress">
+<div class="progress-bar css"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-title">
+<span>JavaScript</span>
+<span>88%</span>
+</div>
+
+<div class="progress">
+<div class="progress-bar js"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-title">
+<span>Python</span>
+<span>80%</span>
+</div>
+
+<div class="progress">
+<div class="progress-bar python"></div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<h2 data-aos="fade-up">Projects</h2>
+
+<div class="projects-container">
+
+<div class="project-card" data-aos="zoom-in">
+
+<img src="{% static 'images/project1.png' %}" alt="project">
+
+<h3>Portfolio Website</h3>
+
+<p>Personal portfolio built using Django.</p>
+
+<div class="project-btns">
+
+<a href="#">GitHub</a>
+<a href="#">Live Demo</a>
+
+</div>
+
+</div>
+
+
+<div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+
+<img src="{% static 'images/project2.png' %}" alt="project">
+
+<h3>Exam Website</h3>
+
+<p>Online exam web application built using Django.</p>
+
+<div class="project-btns">
+
+<a href="#">GitHub</a>
+<a href="#">Live Demo</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" data-aos="fade-up">
+
+<h2>Contact</h2>
+
+<p>Email: adityaashokjagtap9356@email.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/Aditya2005-ui" target="_blank">
+github.com/Aditya2005-ui
+</a>
+</p>
+
+</section>
+
+<!-- CONTACT Form-->
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form method="POST" class="contact-form">
+
+{% csrf_token %}
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+<footer data-aos="fade-up">
+<h3>Made with ❤️ Aditya <h3>
+<p>© 2026 Aditya. All rights reserved.</p>
+
+</footer>
+
+
+<!-- Animation Script -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1000,
+once:true
+});
+
+</script>
+
+</body>
+</html>
