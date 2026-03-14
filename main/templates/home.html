@@ -226,9 +226,9 @@ GitHub
 
 <p>Email: adityaashokjagtap9356@email.com</p>
 
-<p style="color:yellow">
+<p >
 GitHub:
-<a href="https://github.com/Aditya2005-ui" target="_blank">
+<a style="color:yellow" href="https://github.com/Aditya2005-ui" target="_blank">
 github.com/Aditya2005-ui
 </a>
 </p>
@@ -241,9 +241,7 @@ github.com/Aditya2005-ui
 
 <h2>Contact Me</h2>
 
-<form method="POST" class="contact-form">
-
-{% csrf_token %}
+<form action="https://formsubmit.co/adityaashokjagtap9356@email.com" method="POST" class="contact-form">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
@@ -252,6 +250,8 @@ github.com/Aditya2005-ui
 <textarea name="message" placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
+
+<input type="hidden" name="_next" value="https://portfolio1-5fm3.onrender.com">
 
 </form>
 
