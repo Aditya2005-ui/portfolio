@@ -20,13 +20,17 @@ Message:
 {message}
 """
 
-        send_mail(
-            subject,
-            full_message,
-            settings.EMAIL_HOST_USER,
-            [settings.EMAIL_HOST_USER],
-        )
+        try:
+            send_mail(
+                subject,
+                full_message,
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_HOST_USER],
+                fail_silently=True
+            )
+        except Exception:
+            pass
 
-        return redirect("/")   # prevents resubmit warning
+        return redirect("/")
 
     return render(request, "home.html")
