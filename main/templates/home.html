@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<title>Aditya Jagtap | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% load static %}
+<title>Aditya Jagtap | Portfolio</title>
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<!-- Animation Library -->
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 </head>
@@ -17,7 +18,8 @@
 <body>
 
 <!-- NAVBAR -->
-<nav data-aos="fade-down">
+
+<nav>
 
 <h2 class="logo">Aditya Jagtap</h2>
 
@@ -33,14 +35,15 @@
 </nav>
 
 
-<!-- HERO SECTION -->
+<!-- HERO -->
+
 <section id="home" class="hero">
 
 <div class="hero-text" data-aos="fade-right">
 
 <h1>Hello, I'm <span>Aditya Jagtap</span></h1>
 
-<p>Computer Engineering Graduate | Python Full Stack Developer</p>
+<p>Computer Engineering Student | Python Full Stack Developer</p>
 
 <a href="{% static 'resume.pdf' %}" class="btn" download>
 Download Resume
@@ -58,19 +61,20 @@ Download Resume
 
 
 <!-- ABOUT -->
-<section id="about" data-aos="fade-up">
+
+<section id="about">
 
 <h2>About Me</h2>
 
 <p>
-I am Aditya Jagtap, a Computer Engineering graduate passionate about
+I am Aditya Jagtap, a Computer Engineering student passionate about
 Python, Django, Artificial Intelligence, Machine Learning and Web
 Development. I enjoy building practical web applications and currently
-working on an online exam web application. My goal is to become a
-Full Stack Developer and later grow in the field of Data Science.
+working on an online exam web application.
 </p>
 
 </section>
+
 
 <!-- EDUCATION -->
 
@@ -80,9 +84,7 @@ Full Stack Developer and later grow in the field of Data Science.
 
 <div class="education-card">
 
-<div class="edu-icon">
-🎓
-</div>
+<div class="edu-icon">🎓</div>
 
 <div class="edu-content">
 
@@ -93,10 +95,8 @@ Full Stack Developer and later grow in the field of Data Science.
 <p class="edu-year">2023 - 2027</p>
 
 <p>
-Currently pursuing a Bachelor’s degree in Computer Engineering at
-P.K. Technical Campus, Chakan, Pune affiliated with Savitribai Phule
-Pune University. During my studies I am developing strong skills in
-Python, Web Development, Artificial Intelligence and Machine Learning.
+Currently pursuing B.E. Computer Engineering at
+P.K. Technical Campus, Chakan, Pune.
 </p>
 
 </div>
@@ -107,7 +107,8 @@ Python, Web Development, Artificial Intelligence and Machine Learning.
 
 
 <!-- SKILLS -->
-<section id="skills" data-aos="fade-up">
+
+<section id="skills">
 
 <h2>Skills</h2>
 
@@ -170,13 +171,16 @@ Python, Web Development, Artificial Intelligence and Machine Learning.
 
 
 <!-- PROJECTS -->
+
 <section id="projects">
 
-<h2 data-aos="fade-up">Projects</h2>
+<h2>Projects</h2>
 
 <div class="projects-container">
 
-<div class="project-card" data-aos="zoom-in">
+<!-- Portfolio Project -->
+
+<div class="project-card">
 
 <img src="{% static 'images/project1.png' %}" alt="project">
 
@@ -189,14 +193,19 @@ Python, Web Development, Artificial Intelligence and Machine Learning.
 <a href="https://github.com/Aditya2005-ui/portfolio" target="_blank">
 GitHub
 </a>
-<a href="https://portfolio1-5fm3.onrender.com" target="_blank">Live Demo</a>
+
+<a href="https://portfolio1-5fm3.onrender.com/" target="_blank">
+Live Demo
+</a>
 
 </div>
 
 </div>
 
 
-<div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+<!-- Exam Portal -->
+
+<div class="project-card">
 
 <img src="{% static 'images/project2.png' %}" alt="project">
 
@@ -206,9 +215,13 @@ GitHub
 
 <div class="project-btns">
 
-<a href="https://github.com/Aditya2005-ui/exam-portal" target="_blank">GitHub</a>
+<a href="https://github.com/Aditya2005-ui/exam-portal" target="_blank">
+GitHub
+</a>
 
-<a href="https://exam-portal-1-7ha0.onrender.com/" target="_blank">Live Demo</a>
+<a href="https://exam-portal-1-7ha0.onrender.com/" target="_blank">
+Live Demo
+</a>
 
 </div>
 
@@ -220,38 +233,36 @@ GitHub
 
 
 <!-- CONTACT -->
-<section id="contact" data-aos="fade-up">
+
+<section id="contact">
 
 <h2>Contact</h2>
 
 <p>Email: adityaashokjagtap9356@email.com</p>
 
-<p >
+<p>
 GitHub:
-<a style="color:yellow" href="https://github.com/Aditya2005-ui" target="_blank">
+<a class="github-link" href="https://github.com/Aditya2005-ui" target="_blank">
 github.com/Aditya2005-ui
 </a>
 </p>
 
 </section>
 
-<!-- CONTACT Form-->
+
+<!-- CONTACT FORM -->
 
 <section id="contact-form">
 
 <h2>Contact Me</h2>
 
-<form action="mailto:adityaashokjagtap9356@email.com" method="POST" class="contact-form">
+<form class="contact-form">
 
-<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" placeholder="Your Email" required>
 
-<textarea name="message" placeholder="Your Message" required></textarea>
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="hidden" name="_next" value="https://portfolio1-5fm3.onrender.com">
+<textarea placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -259,15 +270,17 @@ github.com/Aditya2005-ui
 
 </section>
 
+
 <!-- FOOTER -->
-<footer data-aos="fade-up">
+
+<footer>
+
 <h3>Made with ❤️ by Aditya</h3>
+
 <p>© 2026 Aditya. All rights reserved.</p>
 
 </footer>
 
-
-<!-- Animation Script -->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
