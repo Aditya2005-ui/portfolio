@@ -23,7 +23,11 @@
 
 <h2 class="logo">Aditya Jagtap</h2>
 
-<ul>
+<div class="menu-toggle" id="menu-toggle">
+☰
+</div>
+
+<ul id="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
@@ -41,7 +45,7 @@
 
 <div class="hero-text" data-aos="fade-right">
 
-<h1>Hello, I'm <span>Aditya Jagtap</span></h1>
+<h1>Hello, I'm <span id="typing"></span></h1>
 
 <p>Computer Engineering Student | Python Full Stack Developer</p>
 
@@ -256,20 +260,65 @@ github.com/Aditya2005-ui
 
 <h2>Contact Me</h2>
 
-<form class="contact-form">
+<form id="contact-form" action="https://formsubmit.co/adityaashokjagtap9356@email.com" method="POST" class="contact-form">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<textarea placeholder="Your Message" required></textarea>
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_subject" value="New Portfolio Message">
 
 <button type="submit">Send Message</button>
+
+<p id="form-status"></p>
 
 </form>
 
 </section>
 
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = () => {
+nav.classList.toggle("active");
+};
+
+
+
+
+const text = "Aditya Jagtap";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,100);
+}
+}
+
+typing();
+
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", function(){
+
+status.innerHTML = "Sending message...";
+
+setTimeout(function(){
+status.innerHTML = "Message sent successfully!";
+},2000);
+
+});
+
+</script>
 
 <!-- FOOTER -->
 
